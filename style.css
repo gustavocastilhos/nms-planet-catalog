@@ -1,0 +1,183 @@
+:root {
+  
+  --nms-espaco-escuro: #070f1f; 
+  --nms-azul-galaxia:  #1A2332; 
+  --nms-cinza-nave:    #2D3748; 
+  --nms-roxo-nebular:  #6F42C1; 
+  --nms-ciano-portal:  #52fa68;
+  --nms-poeira-estelar:#F8FAFC; 
+  --nms-alerta:        #FF4B4B; 
+
+  --bg-principal:      var(--nms-espaco-escuro);
+  --bg-card:           var(--nms-azul-galaxia);
+  --bg-destaque:       var(--nms-cinza-nave);
+  
+ 
+  --texto-primario:    var(--nms-poeira-estelar);
+  --texto-secundario:  #A0AEC0;
+  --texto-claro:       #FFFFFF;
+
+  --cor-primaria:      var(--nms-azul-galaxia);
+  --cor-primaria-hover:#243044;
+  --cor-secundaria:    var(--nms-roxo-nebular);
+  
+  --cta-fundo:         var(--nms-ciano-portal);
+  --cta-fundo-hover:   #66d891;
+  --cta-texto:         #0F141D; 
+
+  /* Estrutura */
+  --borda-padrao:      var(--nms-cinza-nave);
+  --sombra-card:       0 4px 10px rgba(0, 0, 0, 0.4);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-primario);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--cta-fundo);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subtitulo {
+  color: var(--texto-secundario);
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* formulario */
+#form {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda-padrao);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 20px;
+  box-shadow: var(--sombra-card);
+}
+
+.container-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  color: var(--cta-fundo);
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  background-color: var(--bg-principal);
+  border: 1px solid var(--borda-padrao);
+  color: var(--texto-primario);
+  padding: 8px 10px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--cta-fundo);
+}
+
+/* botaos */
+.painel-botoes-form, #painel-botoes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+#painel-botoes {
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: var(--cta-fundo);
+  color: var(--cta-texto);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cta-fundo-hover);
+}
+
+/* Deixando os botões de fora do form com a cor secundária pra dar contraste maneiro */
+#painel-botoes button {
+  background-color: var(--cor-secundaria);
+  color: var(--texto-claro);
+}
+
+#painel-botoes button:hover {
+  background-color: #58339C;
+}
+
+/* cards dos platenas*/
+#painel-planetas {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card-planeta {
+  background-color: var(--bg-card);
+  border: 1px solid var(--borda-padrao);
+  border-left: 5px solid var(--cta-fundo); /* Detalhe colorido na esquerda */
+  border-radius: 6px;
+  padding: 15px;
+  width: 260px;
+  box-shadow: var(--sombra-card);
+}
+
+.card-planeta h2 {
+  color: var(--cta-fundo);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--borda-padrao);
+  padding-bottom: 5px;
+}
+
+.card-planeta p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--texto-primario);
+}
+
+.card-planeta strong {
+  color: var(--texto-secundario);
+}
+
+.id-text {
+  font-size: 0.75rem !important;
+  color: var(--texto-secundario) !important;
+  margin-top: 12px !important;
+  text-align: right;
+}
+
+.msg-vazio {
+  color: var(--texto-secundario);
+  font-style: italic;
+}

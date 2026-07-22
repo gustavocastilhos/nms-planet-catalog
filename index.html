@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>No Man's Sky - Diário de Bordo v0.1</title>
+</head>
+<body>
+    <h1>🪐 No Man's Sky - Diário de Bordo</h1>
+    <p class="subtitulo">Versão 0.4</p>
+    
+    <div id="form">
+        <div class="container-inputs">
+            <label for="input-nome">Nome do Planeta</label>
+            <input id="input-nome" type="text" placeholder="Ex: New Drogradur">
+        </div>
+        <div class="container-inputs">
+            <label for="input-vida">É Planeta Paraíso?</label>
+            <input id="input-vida" type="text" placeholder="Ex: Sim, sem tempestades">
+        </div>
+        <div class="container-inputs">
+            <label for="input-clima">Clima / Sentinelas</label>
+            <input id="input-clima" type="text" placeholder="Ex: Grama roxa, Sentinelas pacíficos">
+        </div>
+        <div class="container-inputs">
+            <label for="input-distancia">Distância do Centro (Anos-luz)</label>
+            <input id="input-distancia" type="number" placeholder="Ex: 3400">
+        </div>
+        <div class="container-inputs">
+            <label for="input-id">ID do Sistema</label>
+            <input id="input-id" type="number" placeholder="Gerado automaticamente">
+        </div>
+        
+        <div class="painel-botoes-form">
+            <button onclick="cadastrarPlaneta()">🚀 Registrar</button>
+            <button onclick="salvarPlaneta()" title="Salvar Alterações">💾 Salvar Edição</button>
+            <button onclick="excluir()" title="Excluir Planeta">🗑️ Excluir</button>
+        </div>
+    </div>
+     
+    <div id="painel-botoes"> 
+        <button onclick="testar()">🛸 Carregar Teste</button>
+        <button onclick="mostrarTodos()">🌌 Mostrar Todos</button>
+        <button onclick="pesquisar()">🔎 Pesquisar por Nome</button>
+    </div>
+  
+    <h1>Planetas Registrados</h1>
+    <div id="painel-planetas">
+        <p class="msg-vazio">Nenhum planeta no diário. Cadastre ou clique em "Carregar Teste".</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
