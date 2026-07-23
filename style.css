@@ -4,7 +4,7 @@
   --nms-azul-galaxia:  #1A2332; 
   --nms-cinza-nave:    #2D3748; 
   --nms-roxo-nebular:  #6F42C1; 
-  --nms-ciano-portal:  #52fa68;
+  --nms-ciano-portal:  #34e7ff;
   --nms-poeira-estelar:#F8FAFC; 
   --nms-alerta:        #FF4B4B; 
 
@@ -29,12 +29,6 @@
   --borda-padrao:      var(--nms-cinza-nave);
   --sombra-card:       0 4px 10px rgba(0, 0, 0, 0.4);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
 
 body {
   background-color: var(--bg-principal);
@@ -56,8 +50,6 @@ h1 {
   margin-bottom: 25px;
   font-size: 0.95rem;
 }
-
-/* formulario */
 #form {
   background-color: var(--bg-card);
   border: 1px solid var(--borda-padrao);
@@ -95,7 +87,6 @@ input:focus {
   border-color: var(--cta-fundo);
 }
 
-/* botaos */
 .painel-botoes-form, #painel-botoes {
   display: flex;
   gap: 8px;
@@ -175,6 +166,9 @@ button:hover {
   color: var(--texto-secundario) !important;
   margin-top: 12px !important;
   text-align: right;
+}
+#div-id{
+    display: none;
 }
 
 .msg-vazio {

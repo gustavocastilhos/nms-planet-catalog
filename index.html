@@ -27,22 +27,27 @@
             <label for="input-distancia">Distância do Centro (Anos-luz)</label>
             <input id="input-distancia" type="number" placeholder="Ex: 3400">
         </div>
-        <div class="container-inputs">
+        <div class="container-inputs" id="div-id">
             <label for="input-id">ID do Sistema</label>
             <input id="input-id" type="number" placeholder="Gerado automaticamente">
         </div>
-        
+        <div class="container-inputs">
+            <label for="input-galaxia">Galáxia Localizada</label>
+            <input id="input-galaxia" type="text" placeholder="Ex: Euclid, Eissentam">
+        </div>
+
         <div class="painel-botoes-form">
             <button onclick="cadastrarPlaneta()">🚀 Registrar</button>
             <button onclick="salvarPlaneta()" title="Salvar Alterações">💾 Salvar Edição</button>
             <button onclick="excluir()" title="Excluir Planeta">🗑️ Excluir</button>
+            <button onclick="pesquisar()">🔎 Pesquisar por Nome</button>
+
         </div>
     </div>
      
     <div id="painel-botoes"> 
         <button onclick="testar()">🛸 Carregar Teste</button>
         <button onclick="mostrarTodos()">🌌 Mostrar Todos</button>
-        <button onclick="pesquisar()">🔎 Pesquisar por Nome</button>
     </div>
   
     <h1>Planetas Registrados</h1>

@@ -6,7 +6,8 @@ function cadastrarPlaneta() {
         nome: document.getElementById("input-nome").value,
         vida: document.getElementById("input-vida").value,
         clima: document.getElementById("input-clima").value,
-        distancia: Number(document.getElementById("input-distancia").value)
+        distancia: Number(document.getElementById("input-distancia").value),
+        galaxia: document.getElementById("input-galaxia").value
     }
     
     planetas.push(novoPlaneta);
@@ -21,6 +22,7 @@ function limparFormulario() {
     document.getElementById("input-clima").value = "";
     document.getElementById("input-distancia").value = "";
     document.getElementById("input-id").value = "";
+    document.getElementById("input-galaxia").value = "";
 }
 function mostrarTodos() {
     const painel = document.getElementById("painel-planetas");
@@ -34,6 +36,7 @@ function mostrarTodos() {
             <p><strong>🌪️ Clima:</strong> ${planetas[i].clima}</p>
             <p><strong>📏 Distância:</strong> ${planetas[i].distancia} Anos-luz</p>
             <p class="id-text">ID: ${planetas[i].id}</p>
+            <p><strong>🌌 Galáxia:</strong> ${planetas[i].galaxia}</p>
         </div>`; 
     }
 }
@@ -44,21 +47,25 @@ function testar() {
             nome: "New Drogradur",
             vida: "Sim, Planeta Paraíso perfeito",
             clima: "Grama fluorescente, Sentinelas pacíficos",
-            distancia: 3400
+            distancia: 3400,
+            Galaxia: "Euclid"
         },
         {
             id: 102,
             nome: "Doidô-Gamma 4",
             vida: "Não, ambiente hostil",
             clima: "Tempestades tóxicas, Sentinelas Agressivos",
-            distancia: 650000
+            distancia: 650000,
+            Galaxia: "Calypso"
+
         },
         {
             id: 103,
             nome: "Indium Prime",
             vida: "Sim, base de mineração construída",
             clima: "Chuva fervente extrema",
-            distancia: 710000
+            distancia: 710000,
+            Galaxia: "Hilbert Dimension"
         }
     ];
 
@@ -74,6 +81,7 @@ function pesquisar() {
             document.getElementById("input-clima").value = planetas[i].clima;
             document.getElementById("input-distancia").value = planetas[i].distancia;
             document.getElementById("input-id").value = planetas[i].id;
+            document.getElementById("input-galaxia").value = planetas[i].galaxia;
             console.log("Planeta encontrado no índice:", i);
             break;
         }
@@ -88,6 +96,7 @@ function salvarPlaneta() {
             planetas[i].vida = document.getElementById("input-vida").value;
             planetas[i].clima = document.getElementById("input-clima").value;
             planetas[i].distancia = Number(document.getElementById("input-distancia").value);
+            planetas[i].galaxia = document.getElementById("input-galaxia").value;
             console.log("Planeta editado no índice:", i);
             break;
         }
