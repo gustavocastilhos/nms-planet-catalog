@@ -1,6 +1,7 @@
+
 :root {
   
-  --nms-espaco-escuro: #070f1f; 
+  --nms-espaco-escuro: #03060c; 
   --nms-azul-galaxia:  #1A2332; 
   --nms-cinza-nave:    #2D3748; 
   --nms-roxo-nebular:  #6F42C1; 
@@ -32,6 +33,7 @@
 
 body {
   background-color: var(--bg-principal);
+  background: url('/assets/nms.png') no-repeat center / cover;
   color: var(--texto-primario);
   padding: 20px;
   display: flex;
