@@ -35,8 +35,8 @@ function mostrarTodos() {
             <p><strong>👽 Paraíso:</strong> ${planetas[i].vida}</p>
             <p><strong>🌪️ Clima:</strong> ${planetas[i].clima}</p>
             <p><strong>📏 Distância:</strong> ${planetas[i].distancia} Anos-luz</p>
-            <p class="id-text">ID: ${planetas[i].id}</p>
             <p><strong>🌌 Galáxia:</strong> ${planetas[i].galaxia}</p>
+            <p class="id-text">ID: ${planetas[i].id}</p>
         </div>`; 
     }
 }
