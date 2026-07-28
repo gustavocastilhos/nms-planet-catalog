@@ -33,7 +33,7 @@
 
 body {
   background-color: var(--bg-principal);
-  background: url('/assets/nms.png') no-repeat center / cover;
+  background: url('/assets/nms.png') no-repeat center / cover;  
   color: var(--texto-primario);
   padding: 20px;
   display: flex;
