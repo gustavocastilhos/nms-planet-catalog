@@ -26,16 +26,13 @@
   --cta-fundo-hover:   #66d891;
   --cta-texto:         #0F141D; 
 
-  /* Estrutura */
   --borda-padrao:      var(--nms-cinza-nave);
   --sombra-card:       0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 body {
-  background-color: var(--bg-principal);
-  background: url('/assets/nms.png') no-repeat center / cover;
-  color: var(--texto-primario);
-  padding: 20px;
+ /* background-color: var(--bg-principal); */
+  background: url('assets/nms.png') no-repeat center / cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,46 +40,35 @@ body {
 
 h1 {
   color: var(--cta-fundo);
-  margin-bottom: 5px;
   text-align: center;
 }
-
 .subtitulo {
   color: var(--texto-secundario);
-  margin-bottom: 25px;
-  font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 #form {
   background-color: var(--bg-card);
-  border: 1px solid var(--borda-padrao);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 20px;
-  width: 100%;
+  width: 40%;
   max-width: 450px;
-  margin-bottom: 20px;
-  box-shadow: var(--sombra-card);
 }
 
 .container-inputs {
   display: flex;
   flex-direction: column;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 label {
   color: var(--cta-fundo);
-  font-size: 0.85rem;
-  font-weight: bold;
-  margin-bottom: 5px;
 }
-
 input {
   background-color: var(--bg-principal);
-  border: 1px solid var(--borda-padrao);
+  border: 1px;
   color: var(--texto-primario);
-  padding: 8px 10px;
+  padding: 5px 5px;
   border-radius: 4px;
-  outline: none;
 }
 
 input:focus {
@@ -127,12 +113,11 @@ button:hover {
 
 /* cards dos platenas*/
 #painel-planetas {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width: 900px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+flex-wrap: wrap;
 }
 
 .card-planeta {
