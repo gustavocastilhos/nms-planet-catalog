@@ -31,7 +31,7 @@ function mostrarTodos() {
         painel.innerHTML += `
         <div class="card-planeta">
             <h2>🪐 ${planetas[i].nome}</h2>
-            <p><strong>👽 Paraíso:</strong> ${planetas[i].vida}</p>
+            <p><strong>🏝️ Paraíso:</strong> ${planetas[i].vida}</p>
             <p><strong>🌪️ Clima:</strong> ${planetas[i].clima}</p>
             <p><strong>📏 Distância:</strong> ${planetas[i].distancia} Anos-luz</p>
             <p><strong>🌌 Galáxia:</strong> ${planetas[i].galaxia}</p>
@@ -51,7 +51,7 @@ function testar() {
         },
         {
             id: 102,
-            nome: "Doidô-Gamma 4",
+            nome: "Doidô-Gamma",
             vida: "Não, ambiente hostil",
             clima: "Tempestades tóxicas, Sentinelas Agressivos",
             distancia: 650000,
@@ -60,7 +60,7 @@ function testar() {
         },
         {
             id: 103,
-            nome: "Indium Prime",
+            nome: "Indium",
             vida: "Sim, base de mineração construída",
             clima: "Chuva fervente extrema",
             distancia: 710000,

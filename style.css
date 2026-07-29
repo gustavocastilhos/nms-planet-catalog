@@ -113,7 +113,7 @@ button:hover {
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 25px;
+gap: 15px;
 flex-wrap: wrap;
 }
 
@@ -169,7 +169,6 @@ flex-wrap: wrap;
     color: #ffffff;          
 }
 .id-text {
-  font-size: 0.75rem ;
   color: var(--texto-secundario) ;
   margin-top: 12px;
   text-align: right;
