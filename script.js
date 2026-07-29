@@ -143,11 +143,14 @@ function excluir() {
     limparFormulario();
 }
 function planetaParaiso() {
+    const contadorDiv = document.createElement("div");
     const divParaiso = document.getElementById("planetas-paraiso");
-        
-    divParaiso.innerHTML = ""; 
-    
+    let planetasEncontrados = 0;
     let encontrouParaiso = false;
+
+    divParaiso.innerHTML = ""; 
+    divParaiso.className = "div-paraiso";
+    contadorDiv.className = "contador-paraiso";
 
     for (let i = 0; i < planetas.length; i++) {
         
@@ -155,11 +158,9 @@ function planetaParaiso() {
         
         if (textoVida.includes("paraíso") || textoVida.includes("paraiso") || textoVida.includes("sim")) {
             encontrouParaiso = true;
-            
+            planetasEncontrados++;
             const cardDoPlaneta = document.createElement("div");
-            cardDoPlaneta.style.border = "0px"; 
-            cardDoPlaneta.style.padding = "10px";
-            cardDoPlaneta.style.marginTop = "5px";
+          
 
             cardDoPlaneta.innerHTML = `
                 <div class="planeta-paraiso">
@@ -170,10 +171,12 @@ function planetaParaiso() {
                 </div>
             `;
             
-            // Corrigido: usando a mesma variável declarada acima (cardDoPlaneta)
-            divParaiso.appendChild(cardDoPlaneta);
+           divParaiso.appendChild(cardDoPlaneta);
         }
     }
+    contadorDiv.innerHTML = `<p>Planetas encontrados: ${planetasEncontrados} </p> `;
+    divParaiso.appendChild(contadorDiv);
+
 
     if (!encontrouParaiso) {
         divParaiso.innerHTML = "<p>Nenhum planeta paraíso encontrado.</p>";

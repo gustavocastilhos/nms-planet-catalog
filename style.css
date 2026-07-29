@@ -142,6 +142,7 @@ flex-wrap: wrap;
   background-color: var(--nms-ciano-portal);
   border-radius: 2px;
   padding: 15px;
+  margin-top: 5px;
   width: 220px;
   box-shadow: var(--sombra-card);
 }
@@ -152,6 +153,20 @@ align-items: center;
 gap: 5px;
 flex-wrap: wrap;
 
+}
+.contador-paraiso {
+    justify-content: center;
+    width: 100%;           
+    display: flex;         
+    margin-bottom: 0px;    
+    color: #ffffff;        
+}
+.div-paraiso p {
+    justify-content: center;
+    width: 100%;           
+    display: flex;         
+    margin-bottom: 0px;    
+    color: #ffffff;          
 }
 .id-text {
   font-size: 0.75rem ;
