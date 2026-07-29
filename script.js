@@ -12,10 +12,10 @@ function cadastrarPlaneta() {
     planetas.push(novoPlaneta);
     console.log("Planeta cadastrado:", planetas);
     
-    limparFormulario();
+    limpandoFormulario();
     mostrarTodos();
 }
-function limparFormulario() {
+function limpandoFormulario() {
     document.getElementById("input-nome").value = "";
     document.getElementById("input-vida").value = "";
     document.getElementById("input-clima").value = "";
@@ -126,7 +126,7 @@ function salvarPlaneta() {
     }
     
     mostrarTodos();
-    limparFormulario();
+    limpandoFormulario();
 }
 function excluir() {
     let id = Number(document.getElementById("input-id").value);
@@ -140,7 +140,7 @@ function excluir() {
     }
     
     mostrarTodos();
-    limparFormulario();
+    limpandoFormulario();
 }
 function planetaParaiso() {
     const contadorDiv = document.createElement("div");
