@@ -39,7 +39,7 @@ function mostrarTodos() {
         </div>`; 
     }
 }
-function testar() {
+function testando() {
     planetas = [
         {
             id: 101,
