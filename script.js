@@ -8,8 +8,7 @@ function cadastrarPlaneta() {
         clima: document.getElementById("input-clima").value,
         distancia: Number(document.getElementById("input-distancia").value),
         galaxia: document.getElementById("input-galaxia").value
-    }
-    
+    } 
     planetas.push(novoPlaneta);
     console.log("Planeta cadastrado:", planetas);
     
@@ -48,7 +47,7 @@ function testar() {
             vida: "Sim, Planeta Paraíso perfeito",
             clima: "Grama fluorescente, Sentinelas pacíficos",
             distancia: 3400,
-            Galaxia: "Euclid"
+            galaxia: "Euclid"
         },
         {
             id: 102,
@@ -56,7 +55,7 @@ function testar() {
             vida: "Não, ambiente hostil",
             clima: "Tempestades tóxicas, Sentinelas Agressivos",
             distancia: 650000,
-            Galaxia: "Calypso"
+            galaxia: "Calypso"
 
         },
         {
@@ -65,7 +64,31 @@ function testar() {
             vida: "Sim, base de mineração construída",
             clima: "Chuva fervente extrema",
             distancia: 710000,
-            Galaxia: "Hilbert Dimension"
+            galaxia: "Hilbert Dimension"
+        },
+        {
+            id: 104,
+            nome: "Parikadi",
+            vida: "Nao, ambiente hostil",
+            clima: "Oxigenio radioativo",
+            distancia: 2310000,
+            galaxia: "Juriabulia"
+        },
+        {
+            id: 105,
+            nome: "Refavid",
+            vida: "Sim, planeta praticamente perfeito",
+            clima: "Luz do sol azul e grama rosa",
+            distancia: 542400,
+            galaxia: "lartezol"
+        },
+        {
+            id: 106,
+            nome: "Ridalveriaforil",
+            vida: "Não",
+            clima: "Nada agradavel",
+            distancia: 953270000,
+            galaxia: "Tindarir"
         }
     ];
 
@@ -118,4 +141,41 @@ function excluir() {
     
     mostrarTodos();
     limparFormulario();
+}
+function planetaParaiso() {
+    const divParaiso = document.getElementById("planetas-paraiso");
+        
+    divParaiso.innerHTML = ""; 
+    
+    let encontrouParaiso = false;
+
+    for (let i = 0; i < planetas.length; i++) {
+        
+        const textoVida = planetas[i].vida.toLowerCase();
+        
+        if (textoVida.includes("paraíso") || textoVida.includes("paraiso") || textoVida.includes("sim")) {
+            encontrouParaiso = true;
+            
+            const cardDoPlaneta = document.createElement("div");
+            cardDoPlaneta.style.border = "0px"; 
+            cardDoPlaneta.style.padding = "10px";
+            cardDoPlaneta.style.marginTop = "5px";
+
+            cardDoPlaneta.innerHTML = `
+                <div class="planeta-paraiso">
+                <strong>Nome:</strong> ${planetas[i].nome} <br>
+                <strong>Galáxia:</strong> ${planetas[i].galaxia } <br>
+                <strong>Vida:</strong> ${planetas[i].vida} <br>
+                <strong>Distância:</strong> ${planetas[i].distancia}
+                </div>
+            `;
+            
+            // Corrigido: usando a mesma variável declarada acima (cardDoPlaneta)
+            divParaiso.appendChild(cardDoPlaneta);
+        }
+    }
+
+    if (!encontrouParaiso) {
+        divParaiso.innerHTML = "<p>Nenhum planeta paraíso encontrado.</p>";
+    }
 }

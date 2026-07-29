@@ -23,7 +23,7 @@
   --cor-secundaria:    var(--nms-roxo-nebular);
   
   --cta-fundo:         var(--nms-ciano-portal);
-  --cta-fundo-hover:   #66d891;
+  --cta-fundo-hover:   #66d8d8;
   --cta-texto:         #0F141D; 
 
   --borda-padrao:      var(--nms-cinza-nave);
@@ -44,7 +44,7 @@ h1 {
 }
 .subtitulo {
   color: var(--texto-secundario);
-  margin-bottom: 15px;
+  margin-bottom: 15px;  
 }
 #form {
   background-color: var(--bg-card);
@@ -100,8 +100,6 @@ button {
 button:hover {
   background-color: var(--cta-fundo-hover);
 }
-
-/* Deixando os botões de fora do form com a cor secundária pra dar contraste maneiro */
 #painel-botoes button {
   background-color: var(--cor-secundaria);
   color: var(--texto-claro);
@@ -111,7 +109,6 @@ button:hover {
   background-color: #58339C;
 }
 
-/* cards dos platenas*/
 #painel-planetas {
 display: flex;
 justify-content: center;
@@ -123,7 +120,6 @@ flex-wrap: wrap;
 .card-planeta {
   background-color: var(--bg-card);
   border: 1px solid var(--borda-padrao);
-  border-left: 5px solid var(--cta-fundo); /* Detalhe colorido na esquerda */
   border-radius: 6px;
   padding: 15px;
   width: 260px;
@@ -132,10 +128,7 @@ flex-wrap: wrap;
 
 .card-planeta h2 {
   color: var(--cta-fundo);
-  font-size: 1.2rem;
-  margin-bottom: 10px;
   border-bottom: 1px solid var(--borda-padrao);
-  padding-bottom: 5px;
 }
 
 .card-planeta p {
@@ -143,15 +136,27 @@ flex-wrap: wrap;
   margin-bottom: 6px;
   color: var(--texto-primario);
 }
-
-.card-planeta strong {
-  color: var(--texto-secundario);
+.planeta-paraiso{
+  border: 0px;
+  justify-content: center;
+  background-color: var(--nms-ciano-portal);
+  border-radius: 2px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: var(--sombra-card);
 }
+#planetas-paraiso{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+flex-wrap: wrap;
 
+}
 .id-text {
-  font-size: 0.75rem !important;
-  color: var(--texto-secundario) !important;
-  margin-top: 12px !important;
+  font-size: 0.75rem ;
+  color: var(--texto-secundario) ;
+  margin-top: 12px;
   text-align: right;
 }
 #div-id{
@@ -159,6 +164,5 @@ flex-wrap: wrap;
 }
 
 .msg-vazio {
-  color: var(--texto-secundario);
-  font-style: italic;
+  color: var(--cta-fundo);
 }

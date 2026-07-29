@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>🪐 No Man's Sky - Diário de Bordo</h1>
-    <p class="subtitulo">Versão 0.5</p>
+    <p class="subtitulo">Versão 0.7</p>
     
     <div id="form">
         <div class="container-inputs">
@@ -41,18 +41,23 @@
             <button onclick="salvarPlaneta()" title="Salvar Alterações">💾 Salvar Edição</button>
             <button onclick="excluir()" title="Excluir Planeta">🗑️ Excluir</button>
             <button onclick="pesquisar()">🔎 Pesquisar por Nome</button>
-
-        </div>
+            <button onclick="planetaParaiso()">🏝️Planetas Paraiso</button>
+             </div>
+    <div id="planetas-paraiso">
     </div>
-     
-    <div id="painel-botoes"> 
+
+        <div id="painel-botoes"> 
         <button onclick="testar()">🛸 Carregar Teste</button>
         <button onclick="mostrarTodos()">🌌 Mostrar Todos</button>
-    </div>
+        </div>
+        
+</div>
+     
+
   
-    <h1>Planetas Registrados</h1>
+    <h1>planetas registrados</h1>
     <div id="painel-planetas">
-        <p class="msg-vazio">Nenhum planeta no diário. Cadastre ou clique em "Carregar Teste".</p>
+        <p class="msg-vazio">Nenhum planeta no diário.</p>
     </div>
 
     <script src="script.js"></script>
