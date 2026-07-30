@@ -1,5 +1,14 @@
 let planetas = []
-
+function carregarLocalStorage() {
+    let planetasSalvos = localStorage.getItem("meusPlanetas");
+    if (planetasSalvos) {
+        planetas = JSON.parse(planetasSalvos);
+    }
+}
+carregarLocalStorage();
+function atualizarLocalStorage() {
+    localStorage.setItem("meusPlanetas", JSON.stringify(planetas));
+}
 function cadastrarPlaneta() {
     const novoPlaneta = {
         id: Date.now(), 
@@ -11,7 +20,7 @@ function cadastrarPlaneta() {
     } 
     planetas.push(novoPlaneta);
     console.log("Planeta cadastrado:", planetas);
-    
+    atualizarLocalStorage();
     limpandoFormulario();
     mostrarTodos();
 }
@@ -23,6 +32,7 @@ function limpandoFormulario() {
     document.getElementById("input-id").value = "";
     document.getElementById("input-galaxia").value = "";
 }
+
 function mostrarTodos() {
     const painel = document.getElementById("painel-planetas");
     painel.innerHTML = ""; 
@@ -39,6 +49,7 @@ function mostrarTodos() {
         </div>`; 
     }
 }
+mostrarTodos();
 function testando() {
     planetas = [
         {
@@ -91,8 +102,8 @@ function testando() {
             galaxia: "Tindarir"
         }
     ];
-
     console.log("Dados de teste carregados:", planetas);
+    atualizarLocalStorage();
     mostrarTodos();
 }
 function pesquisar() {
@@ -124,7 +135,7 @@ function salvarPlaneta() {
             break;
         }
     }
-    
+    atualizarLocalStorage();
     mostrarTodos();
     limpandoFormulario();
 }
@@ -138,19 +149,26 @@ function excluir() {
             break;
         }
     }
-    
+    atualizarLocalStorage();
     mostrarTodos();
     limpandoFormulario();
 }
+
+const contadorDiv = document.createElement("div");
+const divParaiso = document.getElementById("planetas-paraiso");
+
 function planetaParaiso() {
-    const contadorDiv = document.createElement("div");
-    const divParaiso = document.getElementById("planetas-paraiso");
+
+
     let planetasEncontrados = 0;
     let encontrouParaiso = false;
 
     divParaiso.innerHTML = ""; 
     divParaiso.className = "div-paraiso";
     contadorDiv.className = "contador-paraiso";
+    contadorDiv.innerHTML = `<p>Planetas encontrados: ${planetasEncontrados} </p> `;
+
+    divParaiso.appendChild(contadorDiv);
 
     for (let i = 0; i < planetas.length; i++) {
         
@@ -174,11 +192,27 @@ function planetaParaiso() {
            divParaiso.appendChild(cardDoPlaneta);
         }
     }
-    contadorDiv.innerHTML = `<p>Planetas encontrados: ${planetasEncontrados} </p> `;
-    divParaiso.appendChild(contadorDiv);
 
+    contadorDiv.innerHTML = `<p>Planetas encontrados: ${planetasEncontrados} </p> `;
 
     if (!encontrouParaiso) {
         divParaiso.innerHTML = "<p>Nenhum planeta paraíso encontrado.</p>";
+    }else {
+        const divDoBotao = document.createElement("div");
+        divDoBotao.style.width = "100%";
+        divDoBotao.style.display = "flex";
+        divDoBotao.style.justifyContent = "center"; 
+        divDoBotao.style.marginTop = "20px";
+        const botaoFechar = document.createElement("button");
+        botaoFechar.className = "botao-fechar";
+        botaoFechar.innerText = "Fechar Pesquisa";
+        botaoFechar.onclick = fecharPesquisa;
+
+        divDoBotao.appendChild(botaoFechar);
+        divParaiso.appendChild(divDoBotao);
     }
+}
+function fecharPesquisa(){
+ divParaiso.innerHTML = ""; 
+
 }

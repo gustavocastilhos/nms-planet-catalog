@@ -154,6 +154,12 @@ gap: 5px;
 flex-wrap: wrap;
 
 }
+.botao-fechar {
+    display: flex;         
+    align-self: center;
+    width: fit-content;     
+    clear: both;          
+}
 .contador-paraiso {
     justify-content: center;
     width: 100%;           
@@ -176,7 +182,6 @@ flex-wrap: wrap;
 #div-id{
     display: none;
 }
-
 .msg-vazio {
   color: var(--cta-fundo);
 }
